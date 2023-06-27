@@ -8,7 +8,6 @@ export const EffectContext = createContext()
 function App() {
   const [show, toggle] = useReducer(state => !state, false)
 
-  const [effect, setEffect] = useState('none')
   const [strobeSpeedStr, setStrobeSpeedStr] = useState('none')
   const [strobeSpeedNum, setStrobeSpeedNum] = useState(0)
 

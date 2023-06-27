@@ -55,14 +55,6 @@ body {
   z-index: 1;
 }
 
-.btn-effect {
-  margin: 5px;
-}
-
-.effect-selector{
-  padding: 1em 0;
-}
-
 .strobe-selector {
   padding: 1em;
 }
@@ -72,7 +64,7 @@ body {
   flex-direction: column;
 }
 
-.effects, .speeds, .speedometer {
+.speeds, .speedometer {
   margin-top: 2em;
 }
 

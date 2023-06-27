@@ -1,25 +1,8 @@
 export default function ControlPanel({ setEffect, strobeSpeedNum, setStrobeSpeedNum, setStrobeSpeedStr }) {
-  const effects = ['binary', 'strobe', 'none']
   const speeds = ['slow', 'fast', 'none']
   
   return (
     <div className='control-panel'>
-      <div className="effect-selector">
-        <p>Effect Type:</p>
-
-        <div className="effects">
-          {effects.map(effect => (
-            <button
-              key={effect}
-              className="btn btn-effect"
-              onClick={() => setEffect(effect)}
-            >
-              {effect}
-            </button>
-          ))}
-        </div>
-      </div>
-      
       <div className="strobe-selector">
         <p>Strobe Speed:</p>
 

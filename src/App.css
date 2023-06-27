@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid gray; */
+}
+
+body {
+  background-color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  padding: 15px;
+}
+
+
+/* Buttons */
+
+.btn {
+  background-color: #999;
+  padding: 5px;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.btn-sidebar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+
+/* Control Panel */
+
+.control-panel {
+  background-color: #222;
+  width: 200px;
+  height: 100%;
+  padding-top: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.btn-effect {
+  margin: 5px;
+}
+
+.effect-selector{
+  padding: 1em 0;
+}
+
+.strobe-selector {
+  padding: 1em;
+}
+
+.speeds {
+  display: flex;
+  flex-direction: column;
+}
+
+.effects, .speeds, .speedometer {
+  margin-top: 2em;
+}
+
+
+/* Grid */
+
+.grid {
+  display: flex;
+}
+
+.cell {
+  display: flex;
+  border: 1px solid lightgreen;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.light {
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  margin: auto;
+}
+
+.modal {
+  background-color: #222;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 150px;
+  padding: 3px;
+  position: absolute;
+  left: 100%;
+  z-index: 3;
+}
+
+.modal p {
+  font-weight: 100;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.color {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+/* Animations */
+
+@keyframes strobe {
+  0% { opacity: 1; }
+  50% { opacity: .3; }
+  100% { opacity: 1; }
+}

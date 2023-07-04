@@ -41,6 +41,29 @@ body {
   z-index: 2;
 }
 
+/* Prompt */
+
+.prompt {
+  border: 1px solid lightgreen;
+  border-radius: 5px;
+  padding: 3em;
+}
+
+.prompt h3 {
+  border-bottom: 1px solid lightgreen;
+  padding: 1em;
+}
+
+.form {
+  padding: 1em;
+}
+
+.input-group * {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 
 /* Control Panel */
 

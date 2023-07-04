@@ -3,14 +3,14 @@ export default function ControlPanel({ setEffect, strobeSpeedNum, setStrobeSpeed
   
   return (
     <div className='control-panel'>
-      <div className="strobe-selector">
+      <div className='strobe-selector'>
         <p>Strobe Speed:</p>
 
-        <div className="speeds">
+        <div className='speeds'>
           {speeds.map(speed => (
             <button
               key={speed}
-              className="btn btn-effect"
+              className='btn btn-effect'
               onClick={() => setStrobeSpeedStr(speed)}
             >
               {speed}
@@ -18,12 +18,12 @@ export default function ControlPanel({ setEffect, strobeSpeedNum, setStrobeSpeed
           ))}
         </div>
 
-        <div className="speedometer">
+        <div className='speedometer'>
           <input
-            type="range"
-            id="strobe-speed"
-            min="0"
-            max="10"
+            type='range'
+            id='strobe-speed'
+            min='0'
+            max='10'
             value={strobeSpeedNum}
             onChange={e => setStrobeSpeedNum(e.target.value)}
           />

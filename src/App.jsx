@@ -1,34 +1,19 @@
-import { useState, useReducer, createContext } from 'react'
-import Grid from './components/Grid'
-import ControlPanel from './components/ControlPanel'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './pages/Layout'
+import Prompt from './components/Prompt'
+import LiteBrite from './components/LiteBrite'
 import './App.css'
 
-export const EffectContext = createContext()
-
 function App() {
-  const [show, toggle] = useReducer(state => !state, false)
-
-  const [strobeSpeedStr, setStrobeSpeedStr] = useState('none')
-  const [strobeSpeedNum, setStrobeSpeedNum] = useState(0)
-
   return (
-    <div className="container">
-      <button className='btn btn-sidebar' onClick={toggle}>
-        Controls
-      </button>
-
-      <EffectContext.Provider value={{strobeSpeedNum, strobeSpeedStr}}>
-        <Grid />
-      </EffectContext.Provider>
-
-      {show &&
-        <ControlPanel
-          strobeSpeedNum={strobeSpeedNum}
-          setStrobeSpeedNum={setStrobeSpeedNum}
-          setStrobeSpeedStr={setStrobeSpeedStr}
-        />
-      }
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path='/' element={<Prompt />} />
+            <Route path='lite-brite' element={<LiteBrite />} />
+          </Route>
+        </Routes>
+    </BrowserRouter>
   )
 }
 

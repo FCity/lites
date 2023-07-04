@@ -1,5 +1,5 @@
 import { useState, useContext, useReducer } from 'react'
-import { EffectContext } from '../App'
+import { EffectContext } from './LiteBrite'
 import ColorPicker from './ColorPicker'
 
 export default function Cell() {
@@ -26,7 +26,7 @@ export default function Cell() {
 
   return (
     <div className='cell' onClick={toggle}>
-      <div className="light" style={{...lightStyle, ...strobeAnimation1, ...strobeAnimation2}}></div>
+      <div className='light' style={{...lightStyle, ...strobeAnimation1, ...strobeAnimation2}}></div>
       {show && <ColorPicker setColor={setColor} />}
     </div>
   )

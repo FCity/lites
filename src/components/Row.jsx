@@ -1,9 +1,9 @@
 import Cell from './Cell'
 
-export default function Row() {
+export default function Row({ cols }) {
   return (
     <div className='row'>
-      {[0,1,2,3,4].map(i => <Cell key={i} />)}
+      {[...Array(cols).keys()].map(i => <Cell key={i} />)}
     </div>
   )
 }

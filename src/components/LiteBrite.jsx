@@ -12,8 +12,6 @@ export default function LiteBrite() {
 
   return (
     <div className='container'>
-      
-
       <button className='btn btn-sidebar' onClick={toggle}>
         Controls
       </button>

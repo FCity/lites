@@ -46,22 +46,39 @@ body {
 .prompt {
   border: 1px solid lightgreen;
   border-radius: 5px;
-  padding: 3em;
 }
 
 .prompt h3 {
   border-bottom: 1px solid lightgreen;
+}
+
+.prompt, .prompt h3, .form, .btn-submit {
   padding: 1em;
 }
 
-.form {
-  padding: 1em;
+.input-group {
+  display: flex;
+  justify-content: space-around;
 }
 
-.input-group * {
-  display: block;
-  margin: auto;
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid lightgreen;
+  color: #fff;
+  width: 25%;
+  padding: 5px;
   text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 

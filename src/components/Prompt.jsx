@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { GridContext } from '../App'
 
 export default function Prompt() {
-  const [rows, setRows] = useState(5)
-  const [cols, setCols] = useState(5)
+  const { rows, setRows, cols, setCols } = useContext(GridContext)
 
   return (
     <div className='prompt'>
@@ -11,7 +11,7 @@ export default function Prompt() {
       
       <div className='form'>
         <div className='input-group'>
-          <span>How many rows do you want?</span>
+          <span>Rows:</span>
           <input
             type='number'
             min='1'
@@ -22,7 +22,7 @@ export default function Prompt() {
         </div>
         
         <div className='input-group'>
-          <span>How many columns do you want?</span>
+          <span>Columns</span>
           <input
             type='number'
             min='1'
@@ -32,13 +32,9 @@ export default function Prompt() {
           />
         </div>
 
-        <Link to='/lite-brite'>Make Grid</Link>
-      </div>
-
-      <h3>Choose Default Grid</h3>
-
-      <div className="form">
-        <Link to='/lite-brite'>Default</Link>
+        <div className='btn-submit'>
+          <Link to='/lite-brite'>Make Grid</Link>
+        </div>
       </div>
     </div>
   )

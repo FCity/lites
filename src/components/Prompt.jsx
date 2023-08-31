@@ -7,7 +7,7 @@ export default function Prompt() {
 
   return (
     <div className='prompt'>
-      <h3>Make Your Own Grid</h3>
+      <h1>Build A Grid</h1>
       
       <div className='form'>
         <div className='input-group'>
@@ -22,7 +22,7 @@ export default function Prompt() {
         </div>
         
         <div className='input-group'>
-          <span>Columns</span>
+          <span>Columns:</span>
           <input
             type='number'
             min='1'
@@ -32,8 +32,8 @@ export default function Prompt() {
           />
         </div>
 
-        <div className='btn-submit'>
-          <Link to='/lite-brite'>Make Grid</Link>
+        <div className='btn btn-submit'>
+          <Link to='/lite-brite' style={{ fontSize: '1.1rem', color: 'black', textDecoration: 'none' }}>Make Grid</Link>
         </div>
       </div>
     </div>

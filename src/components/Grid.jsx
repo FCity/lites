@@ -7,7 +7,7 @@ export default function Grid() {
 
   return (
     <div className='grid'>
-      {[...Array(rows).keys()].map(i => <Row key={i} cols={cols} />)}
+      {[...Array(Number(rows)).keys()].map(i => <Row key={i} cols={cols} />)}
     </div>
   )
 }

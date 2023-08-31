@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { GridContext } from '../App'
 
-export default function ControlPanel({ setEffect, strobeSpeedNum, setStrobeSpeedNum, setStrobeSpeedStr }) {
+export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStrobeSpeedStr }) {
   const { rows, setRows, cols, setCols } = useContext(GridContext)
   const speeds = ['slow', 'fast', 'none']
   

@@ -25,8 +25,14 @@ export default function Cell() {
   }: {}
 
   return (
-    <div className='cell border-green-300 border-2 w-20 h-20' onClick={toggle}>
-      <div className='light' style={{...lightStyle, ...strobeAnimation1, ...strobeAnimation2}}></div>
+    <div
+      className='cell relative border-green-300 border-2 w-20 h-20 flex justify-center'
+      onClick={toggle}
+    >
+      <div
+        className='w-3/4 h-3/4 rounded-full self-center cursor-pointer'
+        style={{...lightStyle, ...strobeAnimation1, ...strobeAnimation2}}
+      ></div>
       {show && <ColorPicker setColor={setColor} />}
     </div>
   )

@@ -6,9 +6,9 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
   const speeds = ['slow', 'fast', 'none']
   
   return (
-    <div className='bg-gray-700 text-white fixed top-0 right-0 w-[300px] h-full z-10 px-4'>
+    <div className='bg-gray-700 text-white fixed top-0 right-0 w-[300px] h-full px-4 z-10'>
       <div className="mt-20">
-        <p className="text-xl">Grid Dimensions:</p>
+        <p className="text-xl mb-4">Grid Dimensions:</p>
 
         <div className='p-2'>
           <div className='flex justify-between'>
@@ -23,7 +23,7 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
             />
           </div>
           
-          <div className='flex justify-between'>
+          <div className='flex justify-between mt-2'>
             <span>Columns:</span>
             <input
               type='number'
@@ -38,7 +38,7 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
       </div>
 
       <div className='mt-10'>
-        <p className='text-xl'>Strobe Speed:</p>
+        <p className='text-xl mb-4'>Strobe Speed:</p>
 
         <div className='p-2 flex flex-col'>
           {speeds.map(speed => (
@@ -52,10 +52,10 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
           ))}
         </div>
 
-        <div className='mt-4 text-center hover:cursor-pointer'>
+        <div className='mt-10 text-center'>
           <input
             type='range'
-            id='strobe-speed'
+            className='cursor-pointer'
             min='0'
             max='10'
             value={strobeSpeedNum}

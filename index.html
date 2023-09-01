@@ -8,13 +8,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
       @layer base {
-        *:not(.cell, button) {
+        /* *:not(.cell, button) {
           border: 1px solid gray !important;
+        } */
+        @keyframes strobe {
+          0% { opacity: 1; }
+          50% { opacity: .3; }
+          100% { opacity: 1; }
         }
       }
     </style>
   </head>
-  <body>
+  <body class="bg-black">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

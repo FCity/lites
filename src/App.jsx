@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './pages/Layout'
 import Prompt from './components/Prompt'
 import LiteBrite from './components/LiteBrite'
-import './App.css'
+// import './App.css'
 
 export const GridContext = createContext()
 

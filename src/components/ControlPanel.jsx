@@ -15,7 +15,7 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
             <span>Rows:</span>
             <input
               type='number'
-              className='text-black text-right float-right w-1/2'
+              className='text-black text-center float-right w-1/2'
               min='1'
               max='20'
               value={rows}
@@ -27,7 +27,7 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
             <span>Columns:</span>
             <input
               type='number'
-              className='text-black text-right float-right w-1/2'
+              className='text-black text-center float-right w-1/2'
               min='1'
               max='20'
               value={cols}

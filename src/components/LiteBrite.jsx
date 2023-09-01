@@ -13,10 +13,10 @@ export default function LiteBrite() {
   return (
     <div className='relative'>
       <button
-        className='bg-gray-300 hover:bg-gray-200 rounded px-2 py-1 fixed top-4 right-4 z-20'
+        className='bg-gray-300 hover:bg-gray-200 text-black rounded px-2 py-1 fixed top-4 right-4 z-20'
         onClick={toggle}
       >
-        Controls
+        {show ? 'Hide' : 'Controls'}
       </button>
 
       <EffectContext.Provider value={{strobeSpeedNum, strobeSpeedStr}}>

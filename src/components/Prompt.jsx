@@ -6,14 +6,15 @@ export default function Prompt() {
   const { rows, setRows, cols, setCols } = useContext(GridContext)
 
   return (
-    <div className='prompt'>
-      <h1>Build A Grid</h1>
+    <div className='text-center w-1/2 m-auto'>
+      <h1 className='text-3xl'>Build A Grid</h1>
       
-      <div className='form'>
-        <div className='input-group'>
+      <div className=''>
+        <div className='py-[25px]'>
           <span>Rows:</span>
           <input
             type='number'
+            className='text-right'
             min='1'
             max='20'
             value={rows}
@@ -21,10 +22,11 @@ export default function Prompt() {
           />
         </div>
         
-        <div className='input-group'>
+        <div className='py-[25px]'>
           <span>Columns:</span>
           <input
             type='number'
+            className='text-right'
             min='1'
             max='20'
             value={cols}

@@ -6,15 +6,16 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
   const speeds = ['slow', 'fast', 'none']
   
   return (
-    <div className='control-panel'>
-      <div className="grid-selector">
-        <p className="control-panel-title">Grid Dimensions:</p>
+    <div className='bg-gray-700 text-white fixed top-0 right-0 w-[300px] h-full z-10 px-4'>
+      <div className="mt-20">
+        <p className="text-xl">Grid Dimensions:</p>
 
-        <div className='grid-selector'>
-          <div className='input-group'>
+        <div className='p-2'>
+          <div className='flex justify-between'>
             <span>Rows:</span>
             <input
               type='number'
+              className='text-black text-right float-right w-1/2'
               min='1'
               max='20'
               value={rows}
@@ -22,10 +23,11 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
             />
           </div>
           
-          <div className='input-group'>
+          <div className='flex justify-between'>
             <span>Columns:</span>
             <input
               type='number'
+              className='text-black text-right float-right w-1/2'
               min='1'
               max='20'
               value={cols}
@@ -35,14 +37,14 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
         </div>
       </div>
 
-      <div className='strobe-selector'>
-        <p className='control-panel-title'>Strobe Speed:</p>
+      <div className='mt-10'>
+        <p className='text-xl'>Strobe Speed:</p>
 
-        <div className='speeds'>
+        <div className='p-2 flex flex-col'>
           {speeds.map(speed => (
             <button
               key={speed}
-              className='btn btn-effect'
+              className='bg-gray-300 hover:bg-gray-200 text-black rounded px-1 py-2 my-1'
               onClick={() => setStrobeSpeedStr(speed)}
             >
               {speed}
@@ -50,7 +52,7 @@ export default function ControlPanel({ strobeSpeedNum, setStrobeSpeedNum, setStr
           ))}
         </div>
 
-        <div className='speedometer'>
+        <div className='mt-4 text-center hover:cursor-pointer'>
           <input
             type='range'
             id='strobe-speed'

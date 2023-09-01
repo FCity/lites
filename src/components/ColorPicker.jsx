@@ -2,7 +2,7 @@ export default function ColorPicker({setColor}) {
   const colors = ['white', 'crimson', 'lightgreen', 'darkblue', 'gold', 'black']
 
   return (
-    <div className='bg-gray-700 text-white w-[200px] h-[200px] absolute right-[-200px] z-20'>
+    <div className='bg-gray-700 text-white w-[200px] h-[200px] absolute right-[-200px] z-20 rounded'>
       <p className='text-lg p-2'>Pick a Color:</p>
       <div className='flex flex-wrap mt-4 p-1'>
         {colors.map(color => (

@@ -26,7 +26,7 @@ export default function Cell() {
 
   return (
     <div
-      className='cell relative border-green-300 border-2 w-20 h-20 flex justify-center'
+      className='relative border-green-300 border-2 w-20 h-20 flex justify-center'
       onClick={toggle}
     >
       <div

@@ -16,8 +16,8 @@ export default function Prompt() {
   }
 
   return (
-    <div className='text-center w-1/2 mx-auto'>
-      <h1 className='border-b-2 border-green-300 text-3xl w-1/4 m-auto py-4'>Build A Grid</h1>
+    <div className='flex flex-col text-center mt-[150px]'>
+      <h1 className='border-b-2 border-green-300 text-3xl w-1/7 m-auto py-4'>Build a Grid</h1>
       
       <div className='py-4'>
         <div className='py-[25px]'>
@@ -33,7 +33,7 @@ export default function Prompt() {
         </div>
         
         <div className='py-[25px]'>
-          <span className='text-lg mr-4'>Columns:</span>
+          <span className='text-lg mr-4'>Cols:</span>
           <input
             type='number'
             className='text-black text-lg text-center w-[100px] p-2 rounded'
@@ -45,7 +45,7 @@ export default function Prompt() {
         </div>
 
         <div className='mt-10'>
-          <Link to='/lite-brite' style={linkStyle}>Make Grid</Link>
+          <Link to='/lite-brite' style={linkStyle}>Let's Play</Link>
         </div>
       </div>
     </div>

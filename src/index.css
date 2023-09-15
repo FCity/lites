@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-black text-white;
+  }
+  
   @keyframes strobe {
     0% { opacity: 1; }
     50% { opacity: .3; }

@@ -6,7 +6,7 @@ export default function Grid() {
   const { rows, cols } = useContext(GridContext)
 
   return (
-    <div className='flex'>
+    <div className='flex m-4'>
       {[...Array(Number(rows)).keys()].map(i => <Row key={i} cols={cols} />)}
     </div>
   )

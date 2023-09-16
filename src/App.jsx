@@ -19,9 +19,9 @@ function App() {
     <GridContext.Provider value={gridDimensions}>
       <BrowserRouter>
         <Routes>
-          <Route element={<Layout />}>
-            <Route path='/' element={<Prompt />} />
-            <Route path='lite-brite' element={<LiteBrite />} />
+          <Route path='lites' element={<Layout />}>
+            <Route path='/lites' element={<Prompt />} />
+            <Route path='/lites/lite-brite' element={<LiteBrite />} />
           </Route>
         </Routes>
       </BrowserRouter>

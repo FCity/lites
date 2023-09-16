@@ -45,7 +45,7 @@ export default function Prompt() {
         </div>
 
         <div className='mt-10'>
-          <Link to='/lite-brite' style={linkStyle}>Let's Play</Link>
+          <Link to='/lites/lite-brite' style={linkStyle}>Let's Play</Link>
         </div>
       </div>
     </div>
